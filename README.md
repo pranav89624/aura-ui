@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# Aura UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Built With](https://img.shields.io/badge/Built%20With-Gemini%203.0%20Pro-8E44AD)
+![Time](https://img.shields.io/badge/Dev%20Time-30--40%20Mins-success)
 
-Currently, two official plugins are available:
+A immersive landing page designed with modern web technologies. This project combines 3D WebGL experiences with practical UI layouts like bento grids, all optimized for smooth user interactions and experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>**Note:** This project was built using the new **Gemini 3.0 Pro** model. The entire development process, from architecture to debugging, was completed in approximately **30-40 minutes**.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **3D Hero Section:** An interactive 3D environment that responds to mouse movement, built with React Three Fiber.
+* **Performance Optimized:** Implements code splitting and lazy loading to ensure the site loads instantly, even with heavy 3D assets.
+* **Smooth Scrolling:** Uses Lenis for a premium, momentum-based scrolling feel.
+* **Modern Layouts:** Features a responsive bento grid design for showcasing content effectively.
+* **Interactive Elements:** Includes custom cursors, hover effects, and sticky parallax scrolling for the work section.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Core:** React 18, TypeScript
+* **Build Tool:** Vite (Custom chunking configuration)
+* **Styling:** Tailwind CSS v4
+* **3D & Graphics:** Three.js, React Three Fiber, Drei, Postprocessing
+* **Icons:** Lucide React
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Quick Start
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/pranav89624/aura-ui.git
+    cd aura-ui
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2.  **Install dependencies**.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── Hero.tsx          # Main 3D landing scene
+│   ├── Features.tsx      # Bento grid layout and marquee
+│   ├── Work.tsx          # Sticky parallax project cards
+│   ├── Footer.tsx        # Footer section with interactions
+│   ├── Preloader.tsx     # Loading screen state
+│   ├── SEO.tsx           # Head meta tag management
+│   ├── CipherText.tsx    # Text scrambling effect component
+│   ├── TiltCard.tsx      # 3D tilt effect wrapper for cards
+│   ├── SpotlightCard.tsx # Hover spotlight effect wrapper
+│   └── customCursor.tsx  # Custom cursor follower
+├── utils/
+│   └── cn.ts             # Utility for merging Tailwind classes
+├── App.tsx               # Main application and lazy load setup
+├── main.tsx              # Entry point
+└── index.css             # Global styles and Tailwind imports
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## The Gemini 3.0 Pro Experiment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project was created to test the limits of the **new Gemini 3.0 Pro model**.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Prompt Strategy:** The AI acted as a "Top 1% Frontend Designer & Developer trying to create a billion dollar agency landing page" handling everything from architectural decisions to resolving complex WebGL context crashes.
+* **Speed:** The working prototype, including animations and responsive design, was completed in **30-40 minutes**.
+* **Complex Problem Solving:**
+    * *Challenge:* React 19 beta caused `addEventListener` crashes with Three.js.
+    * *AI Solution:* Gemini identified the peer dependency mismatch, downgraded to the stable React 18 stack, and implemented specific Vite chunking strategies to maintain performance.
+
+---
+
+<div align="center">
+  <strong>Experience the live demo:</strong> <a href="https://aura-ui-umber.vercel.app" target="_blank">https://aura-ui-umber.vercel.app</a>
+
+*Created by [Pranav Verma](https://github.com/pranav89624) using Gemini 3.0 Pro.*
+</div>
