@@ -1,0 +1,10 @@
+<svg width="100" height="100" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M32 6L23 20L8 20L20 31L14 46L32 35L50 46L44 31L56 20L41 20L32 6Z" fill="#F97316"/>
+<path d="M32 23L27.5 31L23 39L27.5 35L32 23Z" fill="#F97316" opacity="0.6"/>
+<path d="M32 23L36.5 31L41 39L36.5 35L32 23Z" fill="#F97316" opacity="0.6"/>
+<path d="M32 35L23 46L14 46L20 31L32 35Z" fill="#FF8C00" opacity="0.8"/>
+<path d="M32 35L41 46L50 46L44 31L32 35Z" fill="#FF8C00" opacity="0.8"/>
+<path d="M32 6L23 20L32 35L41 20L32 6Z" fill="#FFAA40"/>
+</g>
+</svg>
